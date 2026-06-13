@@ -1,0 +1,7 @@
+services:
+  sz41-nav:
+    build: .
+    container_name: sz41-nav
+    restart: unless-stopped
+    ports:
+      - "8900:80"
