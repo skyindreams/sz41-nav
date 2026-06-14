@@ -18,9 +18,10 @@
 				.footer-contents { position: relative !important; bottom: auto !important; right: auto !important; left: auto !important; }
 				#footer p { white-space: nowrap !important; }
 			}
-			/* 手机端：等大字体 + 居中 */
+			/* 手机端：等大字体 + 居中 + 修复iOS重叠 */
 			@media only screen and (max-width: 767px) {
-				.footer-contents { text-align: center !important; }
+				.footer-contents { text-align: center !important; position: relative !important; bottom: auto !important; right: auto !important; left: auto !important; }
+				#footer { position: relative !important; height: auto !important; padding: 10px 0 !important; }
 				.footer-contents a { font-size: inherit !important; color: inherit !important; }
 				.footer-contents .copyright { font-size: inherit !important; }
 			}
@@ -76,6 +77,9 @@
 						</li>
 						<li>
 							<a href="https://www.sz41.net" target="_blank"><img class="shake" src="icloud/img/png/8.png" /><strong>网络办公</strong></a>
+						</li>
+						<li>
+							<a href="/admin/" target="_blank"><img class="shake" src="icloud/img/png/Settings.png" /><strong>管理后台</strong></a>
 						</li>
 						<li>
 							<a href="#" target="_blank"><img class="shake" src="icloud/img/png/11.png" /><strong>色艺邮局</strong></a>

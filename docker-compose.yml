@@ -5,3 +5,11 @@ services:
     restart: unless-stopped
     ports:
       - "8900:80"
+    volumes:
+      - ./output/index.html:/usr/share/nginx/html/index.html
+    networks:
+      - sz41-network
+
+networks:
+  sz41-network:
+    external: false

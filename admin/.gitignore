@@ -1,0 +1,29 @@
+# 本地数据（不提交到仓库）
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# 环境变量（含密码密钥）
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 构建输出
+output/
+
+# Docker
+.dockerignore

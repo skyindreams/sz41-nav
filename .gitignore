@@ -1,3 +1,9 @@
 /.git
 /node_modules/
 .DS_Store
+
+# Local admin database
+admin/data/
+admin/.env
+admin/__pycache__/
+admin/*.pyc

@@ -1,0 +1,23 @@
+services:
+  admin:
+    build: .
+    container_name: sz41-admin
+    restart: unless-stopped
+    ports:
+      - "8901:8901"
+    volumes:
+      - ./data:/app/data
+      - ../icloud/output:/app/output
+      - ../icloud/icloud:/app/static_assets
+    env_file:
+      - .env
+    environment:
+      - TZ=Asia/Shanghai
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8901", "--root-path", "/admin"]
+    networks:
+      - sz41-network
+
+networks:
+  sz41-network:
+    name: icloud_sz41-network
+    external: true
